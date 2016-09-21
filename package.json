@@ -1,0 +1,19 @@
+{
+  "name": "notetaker",
+  "version": "1.0.0",
+  "description": "egghead.io notetaker app built with react",
+  "main": "public/index.html",
+  "scripts": {
+    "test": "tape tests/main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matszym/notetaker.git"
+  },
+  "author": "Mateusz Szymański",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/matszym/notetaker/issues"
+  },
+  "homepage": "https://github.com/matszym/notetaker#readme"
+}
