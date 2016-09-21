@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/matszym/notetaker/issues"
   },
-  "homepage": "https://github.com/matszym/notetaker#readme"
+  "homepage": "https://github.com/matszym/notetaker#readme",
+  "dependencies": {
+    "react": "15.3.2"
+  }
 }
