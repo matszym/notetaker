@@ -4,6 +4,8 @@
   "description": "egghead.io notetaker app built with react",
   "main": "public/index.html",
   "scripts": {
+    "start": "webpack-dev-server --inline --hot",
+    "build": "webpack -p",
     "test": "tape tests/main.js"
   },
   "repository": {
@@ -17,6 +19,21 @@
   },
   "homepage": "https://github.com/matszym/notetaker#readme",
   "dependencies": {
-    "react": "15.3.2"
+    "bootstrap": "3.3.7",
+    "css-loader": "0.25.0",
+    "file-loader": "0.9.0",
+    "react": "15.3.2",
+    "react-dom": "15.3.2",
+    "react-router": "2.8.1",
+    "style-loader": "0.13.1",
+    "url-loader": "0.5.7"
+  },
+  "devDependencies": {
+    "babel-core": "6.14.0",
+    "babel-loader": "6.2.5",
+    "babel-preset-es2015": "6.14.0",
+    "babel-preset-react": "6.11.1",
+    "webpack": "1.13.2",
+    "webpack-dev-server": "1.16.1"
   }
 }
