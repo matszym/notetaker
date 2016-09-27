@@ -1,5 +1,6 @@
 const React = require('react'),
 bootstrap = require('bootstrap/dist/css/bootstrap.min.css'),
+SearchGithub = require('./Github/SearchGithub'),
 
 Main = React.createClass({
   render() {
@@ -7,7 +8,7 @@ Main = React.createClass({
       <div className="main-container">
         <div className="navbar navbar-default" role="navigation">
           <div className="col-sm-7 col-sm-offset-2" style={{marginTop: 15}}>
-            MENU
+            <SearchGithub />
           </div>
         </div>
         <div className="container">
