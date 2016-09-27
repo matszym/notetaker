@@ -7,7 +7,7 @@ Profile = require('../components/Profile'),
 
 module.exports = (
   <Route path="/" component={Main}>
-    <Route path="profile/:usermname" component={Profile} />
+    <Route path="profile/:username" component={Profile} />
     <IndexRoute component={Home} />
   </Route>
 );
