@@ -5,11 +5,11 @@ const SearchGithub = React.createClass({
   getRef(ref) {
     this.usernameRef = ref;
   },
-  handleSubmit() {
-    console.log(Router.browserHistory);
+  handleSubmit(e) {
+    e.preventDefault();
     const username = this.usernameRef.value;
     this.usernameRef.value = '';
-    Router.browserHistory.push('profile/' + username + '/');
+    Router.browserHistory.push(`/profile/${username}`);
   },
   render() {
     return (
