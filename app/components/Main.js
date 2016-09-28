@@ -1,8 +1,8 @@
-const React = require('react'),
-bootstrap = require('bootstrap/dist/css/bootstrap.min.css'),
-SearchGithub = require('./Github/SearchGithub'),
+import React from 'react';
+import bootstrap from 'bootstrap/dist/css/bootstrap.min.css';
+import SearchGithub from './Github/SearchGithub';
 
-Main = React.createClass({
+const Main = React.createClass({
   render() {
     return (
       <div className="main-container">
@@ -19,4 +19,4 @@ Main = React.createClass({
   }
 });
 
-module.exports = Main;
+export default Main;

@@ -1,4 +1,4 @@
-const React = require('react');
+import React  from 'react';
 
 const UserProfile = React.createClass({
   propTypes: {
@@ -15,4 +15,4 @@ const UserProfile = React.createClass({
   }
 });
 
-module.exports = UserProfile;
+export default UserProfile;

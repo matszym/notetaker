@@ -1,15 +1,15 @@
-const React = require('react');
-const Router = require('react-router');
-const ReactFireMixin = require('reactfire');
-const firebase = require('firebase');
+import React from 'react';
+import Router from 'react-router';
+import ReactFireMixin from 'reactfire';
+import firebase from 'firebase';
 
-const firebaseConfig = require('../config/firebase.js');
+import firebaseConfig from '../config/firebase.js';
 
-const Repos = require('./Github/Repos.js');
-const UserProfile = require('./Github/UserProfile.js');
-const Notes = require('./Notes/Notes.js');
+import Repos from './Github/Repos.js';
+import UserProfile from './Github/UserProfile.js';
+import Notes from './Notes/Notes.js';
 
-const helpers = require('../utils/helpers.js');
+import helpers from '../utils/helpers.js';
 
 const Profile = React.createClass({
   mixins: [ReactFireMixin],
@@ -76,4 +76,4 @@ const Profile = React.createClass({
   }
 });
 
-module.exports = Profile;
+export default Profile;

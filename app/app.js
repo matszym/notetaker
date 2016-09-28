@@ -1,7 +1,7 @@
-const React = require('react');
-const {render} = require('react-dom');
-const {Router, browserHistory} = require('react-router');
-const routes = require('./config/routes');
+import React from 'react';
+import {render} from 'react-dom';
+import {Router, browserHistory} from 'react-router';
+import routes from './config/routes';
 
 render(
   <Router history={browserHistory}>{routes}</Router>,

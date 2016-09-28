@@ -1,7 +1,7 @@
-const React = require('react');
+import React from 'react';
 
-const NotesList = require('./NotesList');
-const AddNote = require('./AddNote.js');
+import NotesList from './NotesList';
+import AddNote from './AddNote.js';
 
 const Notes = React.createClass({
   propTypes: {
@@ -20,4 +20,4 @@ const Notes = React.createClass({
   }
 });
 
-module.exports = Notes;
+export default Notes;

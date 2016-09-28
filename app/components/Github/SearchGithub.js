@@ -1,5 +1,5 @@
-const React = require('react');
-const Router = require('react-router');
+import React from 'react';
+import { browserHistory } from 'react-router';
 
 const SearchGithub = React.createClass({
   getRef(ref) {
@@ -9,7 +9,7 @@ const SearchGithub = React.createClass({
     e.preventDefault();
     const username = this.usernameRef.value;
     this.usernameRef.value = '';
-    Router.browserHistory.push(`/profile/${username}`);
+    browserHistory.push(`/profile/${username}`);
   },
   render() {
     return (
@@ -27,4 +27,4 @@ const SearchGithub = React.createClass({
   }
 });
 
-module.exports = SearchGithub;
+export default SearchGithub;
