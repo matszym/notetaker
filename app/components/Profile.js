@@ -9,6 +9,8 @@ const Repos = require('./Github/Repos.js');
 const UserProfile = require('./Github/UserProfile.js');
 const Notes = require('./Notes/Notes.js');
 
+const helpers = require('../utils/helpers.js');
+
 const Profile = React.createClass({
   mixins: [ReactFireMixin],
   getInitialState() {
@@ -24,8 +26,24 @@ const Profile = React.createClass({
     firebase.initializeApp(firebaseConfig);
 
     this.ref = firebase.database().ref('/');
-    const childRef = this.ref.child(this.props.params.username);
+    this.init(this.props.params.username);
+  },
+  init(username) {
+    const childRef = this.ref.child(username);
     this.bindAsArray(childRef, 'notes');
+
+    helpers
+    .getGithubInfo(username)
+    .then(data => {
+      this.setState({
+        bio: data.user,
+        repos: data.repos
+      });
+    });
+  },
+  componentWillReceiveProps(nextProps) {
+    this.unbind('notes');
+    this.init(nextProps.params.username);
   },
   componentWillUnmount() {
     this.unbind('notes');
